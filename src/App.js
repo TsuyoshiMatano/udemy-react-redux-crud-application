@@ -9,7 +9,7 @@ const App = () => {
   const profiles = [
     {name: "Taro",age:10},
     {name: "Hanako",age:25},
-    {name:"noAge"},
+    {name:"noAge" }, //ageがなくても、User.defaultPropsも既述されている年齢が表示される
   ]
   return(
     <div>

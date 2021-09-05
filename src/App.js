@@ -1,15 +1,12 @@
-// eslint-disable-next-line
-import { PLACEHOLDERS_FLIPPED_ALIAS } from "@babel/types";
-// eslint-disable-next-line 
-import { props } from "bluebird";
-import React from "react";
+import React from "react"; 
+import PropTypes from 'prop-types';
 
 
 const App = () => {
   const profiles = [
     {name: "Taro",age:10},
     {name: "Hanako",age:25},
-    {name:"noAge" }, //ageがなくても、User.defaultPropsも既述されている年齢が表示される
+    {name:"noAge", age:20},
   ]
   return(
     <div>
@@ -26,8 +23,8 @@ const User = (props) => {
   return <div>Hi!! I am {props.name},and {props.age} years old!</div>
 }
 
-User.defaultProps = {
-  age : 1
+User.PropTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number.isRequired,
 }
-
 export default App;
